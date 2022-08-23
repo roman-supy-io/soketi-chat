@@ -1,0 +1,21 @@
+<div style="text-align: center">
+  <h1>Welcome to app!</h1>
+  <img
+    width="450"
+    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
+    alt="Nx - Smart, Fast and Extensible Build System"
+  />
+</div>
+
+<button (click)="hello()">Request</button>
+<button (click)="emit()">Emit</button>
+
+<ul *ngIf="messages.length; else nomessages">
+  <li *ngFor="let m of messages">
+    {{m}}
+  </li>
+</ul>
+
+<ng-template #nomessages>
+  <div>no messages</div>
+</ng-template>
